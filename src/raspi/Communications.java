@@ -47,15 +47,10 @@ public class Communications extends Thread {
 	@Override
 	public void run() {
 		super.run();
-		pw.println("Hello World");
-		pw.flush();
-		System.out.println("Sent Hello World");
 		while(true){
 			try {
 				String line = br.readLine();
-				if(line != null){
-					System.out.println(line);
-				}
+				System.out.println(line);
 			} catch(IOException e) {
 				e.printStackTrace();
 			}
